@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %} 
+ 
+{% block title %}Envoi de mail{% endblock %} 
+ 
+{% block body %} 
+<h1>Le mail a bien été envoyé</h1> 
+{% endblock %} 
+Utilisez ce template dans l’action sendEmail() du MailController :
+
+<?php 
+namespace App\Controller; 
+ 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController; 
+use Symfony\Component\HttpFoundation\Response; 
+use Symfony\Component\Mailer\MailerInterface; 
+use Symfony\Component\Mime\Email; 
+use Symfony\Component\Routing\Annotation\Route; 
+ 
+class MailController extends AbstractController 
+{ 
+    #[Route('/email',name:'email')] 
+    public function sendEmail(MailerInterface $mailer): Response 
+    { 
+        $email = (new Email()) 
+            ->from('monAppliSymf@symfony.com') 
+            ->to('mondestinataire@monmail.com') 
+            ->subject('Mon appli Symfony') 
+            ->html('<p>Symfony is the best</p>'); 
+        $mailer->send($email); 
+        return $this->render('mail/index.html.twig');  
+         
+    } 
+}
