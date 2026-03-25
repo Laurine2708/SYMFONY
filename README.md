@@ -2,12 +2,12 @@
 
 ## Description
 
-Ce projet montre les jointures entre les tables, les liens entre les produits, les références et les distributeurs ainsi que comment **sécuriser un mot de passe avant de l'enregistrer dans une base de données**.
+Ce projet montre les jointures entre les tables, les liens entre les produits, les références et les distributeurs et comment **sécuriser un mot de passe avant de l'enregistrer dans une base de données**.
 
 Au lieu de stocker le mot de passe en clair, il est transformé grâce à une **fonction de hachage**.
 Seule l’empreinte du hash est enregistrée, ce qui permet de **protéger les informations des utilisateurs**.
 
-## Fonctionnement
+## Fonctionnement du hashage du mot de passe
 
 1. L'utilisateur saisit un mot de passe.
 2. Le mot de passe est transformé avec une fonction de hash.
