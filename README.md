@@ -1,8 +1,8 @@
-# Projet de gestion des mots de passe avec hash
+# Projet de site de e-commerce avec gestion des mots de passe avec hash
 
 ## Description
 
-Ce projet montre comment **sécuriser un mot de passe avant de l'enregistrer dans une base de données**.
+Ce projet montre les jointures entre les tables, les liens entre les produits, les références et les distributeurs ainsi que comment **sécuriser un mot de passe avant de l'enregistrer dans une base de données**.
 
 Au lieu de stocker le mot de passe en clair, il est transformé grâce à une **fonction de hachage**.
 Seule l’empreinte du hash est enregistrée, ce qui permet de **protéger les informations des utilisateurs**.
@@ -20,6 +20,7 @@ Seule l’empreinte du hash est enregistrée, ce qui permet de **protéger les i
 * Symfony
 * MySQL
 * Composer
+* Doctrine
 
 ## Installation
 
@@ -43,4 +44,3 @@ Lancer le serveur :
 symfony server:start
 ```
 
-L'objectif de ce projet est de comprendre **le fonctionnement du hash et les bonnes pratiques de sécurité pour les mots de passe**.
